@@ -5,7 +5,7 @@ How to use elci.sh:
 To use elci.sh, open a terminal and navigate into the for elci.sh folder
 type in the following lines into your terminal
 
-bash elci.sh
+    bash elci.sh
 
 You will then be prompted to enter your password - this is because the installer uses sudo level priviledges.
 elci.sh will then run some software updates and install flatpak onto your system - if you do not wish to install flatpak press 'n' when prompted.
@@ -20,6 +20,7 @@ If you are unsure what to do when presented with a yes or no prompt, press enter
 
 Lapi
 Lapi is designed to help laptop users install software that will improve their linux experience (such as power management and touchpad support)
+
 
 AudioMan
 AudioMan helps users install audio manangement/routing software such as ALSA.
