@@ -2,11 +2,14 @@
 This is the general repository for the elci.sh project.
 How to use elci.sh:
 
-To use elci.sh, open a terminal and navigate into the for elci.sh folder
-type in the following lines into your terminal
+To download elci.sh and the accoompanying files enter the following command into your terminal:
 
-    bash elci.sh
+        git clone https://github.com/ELCI-Linux/elci.sh
+        
+Navigate to the elci.sh folder and enter:
 
+        bash elci.sh
+        
 You will then be prompted to enter your password - this is because the installer uses sudo level priviledges.
 elci.sh will then run some software updates and install flatpak onto your system - if you do not wish to install flatpak press 'n' when prompted.
 
