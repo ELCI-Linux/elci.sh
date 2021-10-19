@@ -1,0 +1,17 @@
+Tubefeeder
+
+A Youtube-Client made for the Pinephone
+Make sure to follow the setup guide before installing
+
+Tubefeeder allows to watch youtube videos on your Pinephone, including features like a subscription list, a filter list and a watch-later list.
+
+Tubefeeder uses mpv to play the videos. This is already included in Flatpak, install it otherwise.
+
+Features:
+
+    Feed of your favorite videos.
+    Add videos to a watch-later list
+    Filter out unwanted videos.
+    Subscribe to a channel by name.
+
+
