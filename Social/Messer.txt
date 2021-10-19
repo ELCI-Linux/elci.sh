@@ -1,0 +1,3 @@
+
+apt install npm
+npm install -g messer
