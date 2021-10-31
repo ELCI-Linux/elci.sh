@@ -136,7 +136,6 @@ echo -e  "\e[7;34m Would you like to install Web Browsers? \e[0m"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) cd ./Webb
-chmod u+x Webb.sh &&
 bash Webb.sh &&
  cd .. && break;;
         No ) echo -e  "\e[7;33m Ok, moving on \e[0m" && break;
