@@ -290,7 +290,7 @@ echo -e "\e[0;34m Would you like to install mobile support software \e[0m"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) echo -e  "\e[7;33m Opening Mobile Support Installer \e[0m" &&
-cd ./Celli && bash MobSupX.sh ; break;;
+cd ./Celli && bash Celli.sh ; break;;
         No ) echo -e  "\e[7;33m Ok, moving on \e[0m" && break;;
     esac
 done
