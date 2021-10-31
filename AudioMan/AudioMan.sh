@@ -1,7 +1,7 @@
 #! /bin/bash/
-
+echo -e  "\e[7;33m AudioMan initiated \e[0m"
 PS3='Choose your Audio Management: '
-        AudioMan=("ALSA" "JACK" "Powerwire" "PulseAudio" "Apple Silicon"  "Skip" "Quit Installer")
+        AudioMan=("ALSA" "JACK" "Powerwire" "PulseAudio" "Skip" "Quit Installer")
         select fav in "${AudioMan[@]}"; do
         case $fav in
         "ALSA") sudo apt-get install alsa alsa-tools && break;;
