@@ -270,7 +270,7 @@ select yn in "Yes" "No"; do
     case $yn in
         Yes ) echo "Ok, opening Strobe!" &&
 echo -e  "\e[7;33m Running StrobeX \e[0m"
-cd ./Strobe && bash StrobeX.sh && cd ..
+cd ./Strobe && bash StrobeX.sh & cd ..
 echo -e  "\e[7;33m StrobeX closed \e[0m" &&
 echo -e  "\e[7;33m Moving on \e[0m"; break;;
         No ) echo -e  "\e[7;33m Ok, moving on \e[0m" && break;
