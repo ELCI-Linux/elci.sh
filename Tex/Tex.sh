@@ -1,11 +1,11 @@
 #! /bin/bash/
 
 #fix atom deb and rpm installs
-echo -e  "\e[5;31m Tex can help you install a variety of text editors. \e[0m"  "\e[5;32m -G- \e[0m" "\e[5;34m -B- \e[0m"
+echo -e  "\e[7;36m Tex can help you install a variety of text editors. \e[0m"
 
-echo -e "\e[7;31m Pick an install method for emacs \e[0m"
+echo -e "\e[7;35m Pick an install method for emacs \e[0m"
 PS3='Choose your text editor: '
-tex=("atom" "emacs" "micro" "nano" "vim" "Skip" "Quit Installer")
+tex=("atom" "emacs" "micro" "nano" "vim" "INSTALL ALL" "Skip" "Quit Installer")
 select fav in "${tex[@]}"; do
     case $fav in
 "atom")
@@ -34,6 +34,10 @@ done
        wget -s https://az764295.vo.msecnd.net/stable/c13f1abb110fc756f9b3a6f16670df9cd9d4cf63/code_1.61.1-1634175470_amd64.deb && 
 	chmod u+x code_1.61.1-1634175470_amd64.deb &&
 	sudo dpkg -i code_1.61.1-1634175470_amd64.deb && break;;
+"INSTALL ALL")
+	sudo apt-get install nano vim & wget -s https://az764295.vo.msecnd.net/stable/c13f1abb110fc756f9b3a6f16670df9cd9d4cf63/code_1.61.1-1634175470_amd64.deb && 
+        chmod u+x code_1.61.1-1634175470_amd64.deb &&
+        sudo dpkg -i code_1.61.1-1634175470_amd64.deb && break;;
 
 "Skip")
             break;;
