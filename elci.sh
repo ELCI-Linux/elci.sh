@@ -135,7 +135,7 @@ echo -e "\e[7;36m Webb can guide you through installing 14 popular web browsers 
 echo -e  "\e[7;34m Would you like to install Web Browsers? \e[0m"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) cd ./Webb ;
+        Yes ) cd ./Webb
 chmod u+x Webb.sh &&
 bash Webb.sh &&
  cd .. && break;;
