@@ -15,6 +15,11 @@ elci.sh will then run some software updates and install flatpak onto your system
 
 elci.sh will install wget
 
+If you want to see a list of installers and the programs included in them enter:
+
+       cat elciprolist.txt
+       
+
 
 You will then be prompted to enter your name - this doesn't need to be a username.
 
