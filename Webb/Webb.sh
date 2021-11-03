@@ -25,7 +25,7 @@ select fav in "${Browser[@]}"; do
 	sudo apt-get update -yy && sudo apt-get upgrade -yy
 	sudo apt-get install firefox -yy && break;;
 "Konqueror")
-	sudo apt install konqueror && break;;
+	sudo apt install konqueror -yy && break;;
 "Links")
 	sudo mkdir ./LinksInstallFiles || echo "Installer directory already exists"
 	cd ./LinksInstallFiles &&
