@@ -1,0 +1,167 @@
+**Adam - Start Panel**
+
+Working
+	Docky
+	fbpanel
+	i3status
+	Latte Dock
+	Lemonbar
+	Plank
+	Polybar
+	tint2
+	Vala Panel
+	XFCE Panel
+
+Not yet working
+	AWN
+	bmpanel2
+	Cairo
+	DockbarX
+
+Working
+	
+
+Andrew - Android Emulation and APK Support
+	Anbox
+
+AudioMan - System wide audio controls 
+
+Celli - Mobile Connectivity
+	ADB
+	iFuse
+	KDE Connect
+	scrcpy
+	sndcpy
+
+
+Cressida - Screen Recording
+	Kazam
+
+DAWX - Audio Production
+	Ardour
+	Bitwig Studio
+	Drumstick
+	Fami
+	Mixx
+	Muse
+	
+
+Euclid - Calculators and Mathematics focused applications
+	Calclator
+	Genius
+	Gnome Calculator
+	Kcalc
+	Liri Calculator
+	Pebbles
+	Qalculate!
+	Scilab
+	SpeedCrunch
+	Sums
+	Veusz
+FotoRoom - PhotoEditing
+	UNPOPULATED
+Harmony - Music Players
+	Apple Music
+	Audacious
+	Byte
+	Deezer
+	CMUS
+	Gnome Music Player
+	Hydrogen
+	Lyrics
+	Spotify
+	Strawberry
+	TIDAL - via Strawberry
+	
+Kim - Instagram Clients
+	Instagram Port
+	Insagraph
+
+Lapi - Laptop Support
+	Touche
+	Auto-CPU Freq
+Neo - Terminal Emulators and CLI applications
+	See Neoprolist.txt
+
+Paddy - Video Game Console Emulators
+	Citra
+	DeSume
+	Dolphin
+	DuckStation
+	gbe-plus
+	Melon
+	Nestopia
+	PCSX2
+	PPSSPP
+	RetroArch
+	RPCS3
+	Xemu
+PostMan - E-Mail Client
+	Thunderbird
+	MailSpring
+		
+Quentin - Video Editing
+	Blender
+	Cinelerra
+	Flowblade
+	Handbrake
+	Kdenlive
+	Openshot
+	Shotcut
+	VidCutter
+		
+River - Live streaming software
+	NOT POPULATED
+Sam - Cryptocurrency applications
+	ARKWallet
+	BitcoinCore
+	PeerCoin
+	Wasabi
+Scribe - Notetaking apps
+	Joplin
+Sesame - Password Managers
+	Bitwarden	
+Social - Social Media Clients
+
+Strobe - Linux 'Spotlight' alternatives
+	Alfred
+	Ulauncher
+Stylist - Aesthetic customisation tools
+
+Tex - Text Editors
+	Nano
+	Vim
+Thomas - Steam and Proton Installation
+	Steam
+	Steam Link
+	Boxtron
+	Proton
+	Vulkan
+TWM - Tiling Window Managers
+
+VidConf - Video Conferancing Appplications
+	Zoom
+VMX - Virtualisation Applications
+	Bottles
+	Phoenicis
+	VirtualBox
+
+Webb - Web Browsers
+	Brave + BETA
+	Chrome
+	Chromium
+	Epiphany
+	Falkon
+	Firefox 
+	Konqueror
+	Links
+	Midori
+	Min
+	OPera
+	Pale Moon
+	Slimjet
+	Water Fox
+	Vivaldi
+WX - Windows Application Support
+
+YTX - YouTube Video Downloaders
