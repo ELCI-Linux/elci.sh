@@ -204,6 +204,25 @@ fi
     esac
 done
 pwd
+
+#E-mail clients
+echo -e  "\e[7;34m Would you like to install DAWs and other audio production tools? \e[0m"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes )
+		cd ./PostMan
+		chmod +x Postman.sh
+		bash Postman.sh 
+		cd ..
+ 	break;;
+        No )
+		echo -e  "\e[7;33m Ok, moving on \e[0m"
+		break;
+    esac
+done
+
+
+
 sleep 0.5s
 # Emulation tools should only be used for appopriately licensed games and software.
 #9
@@ -430,7 +449,7 @@ sleep 0.5s
 #15
 #Video Editing
 echo -e  "\e[7;33m =========Video Editing========= \e[0m"
-echo -e  "\e[7;33m ------------VidEdit------------ \e[0m"
+echo -e  "\e[7;33m ------------Quentin------------ \e[0m"
 
 echo -e "\e[0;35m VidConf will guide you through installing a wide range of video calling and conferancing apps  \e[0m"
 
@@ -438,7 +457,7 @@ echo -e "\e[0;35m VidConf will guide you through installing a wide range of vide
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) echo -e "\e[7;33m Installing Video Editors \e[0m" &&
-cd ./VidEdit && bash VidEditX.sh & cd ..; break;;
+cd ./Quentin && bash Quentin.sh & cd ..; break;;
         No ) echo -e "\e[7;33m Ok, moving on \e[0m" && break;;
     esac
 done
