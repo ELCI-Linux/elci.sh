@@ -34,11 +34,9 @@ select fav in "${Taskbar[@]}"; do
 "Lemonbar") sudo apt-get install lemonbar -yy $TBBREAK;;
 "Plank")	sudo apt-get install plank -yy $TBBREAK;;
 "Polybar")	sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev
- libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev
-libxcb-xkb-dev pkg-config python3-xcbgen xcb-proto libxcb-xrm-dev i3-wm
-libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev -yy
-		
-sudo apt install libxcb-composite0-dev libjsoncpp-dev -yy
+				     	libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev
+					libxcb-xkb-dev pkg-config python3-xcbgen xcb-proto libxcb-xrm-dev i3-wm
+					libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev  libxcb-composite0-dev libjsoncpp-dev -yy
 sudo ln -s /usr/include/jsoncpp/json/ /usr/include/json
 git clone https://github.com/jaagr/polybar.git
 cd ./polybar && echo "Building polybar" && sudo ./build.sh && cd .. && echo "cleaning up" && rm -r ./polybar	&& echo "Clean up finished" $TBBREAK;;
