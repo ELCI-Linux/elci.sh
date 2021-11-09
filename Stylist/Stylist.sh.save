@@ -1,0 +1,156 @@
+#! /bin/bash
+
+#macos - By ChrisTitusTech
+sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
+git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
+mkdir ~/.themes
+mkdir ~/.icons
+mv ~/MacOS/themes/* ~/.themes
+mv ~/MacOS/icons/* ~/.icons
+sudo mv ~/MacOS/walls/* /usr/share/backgrounds/
+#------GNOME Settings
+gsettings set org.gnome.mutter center-new-windows 'true'
+gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
+gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-dark"
+gsettings set org.gnome.desktop.wm.preferences theme "WhiteSur-dark"
+gsettings set org.gnome.desktop.interface icon-theme 'BigSur'
+gsettings set org.gnome.desktop.interface cursor-theme 'capitaine-cursors-light'
+gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/macOS-BS3.jpg'
+gsettings get org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/macOS-BS1.jpg'
+#-------Albert Search and Cairo Dock
+curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc"
+sudo apt update
+sudo apt install albert cairo-dock cairo-dock-plug-ins -y
+
+
+
+echo -e "\e[7;38m Would you like to install icon packs? \e[0m"
+Select yn in "Yes" "No"; do
+case $yn in
+Yes)	
+	PS3=(Select your icon packs)
+	("Arc" "Boston" "Breeze-Chamelon" "Elementary" "Evolvere" "Faenza" "Flat Remix" "gnome-colors" "Human Minimal"  "kora"  "La Capitaine" "Mojave CT Icons" "Moka" "Nitrux"  "Oranchelo" "Paper" "Papirus" "Shadow"  "Numix Circle" "Vivacious-Colors" "White Sur"  "Xenlism"  "Zafiro")
+	"Arc")
+	"Boston")
+	"Breeze-Chamelon")
+	"Elementary")
+	 "Evolvere")
+	 "Faenza")
+	"Flat Remix")
+	 "gnome-colors")
+	 "Human Minimal")
+	 "kora") 
+	"La Capitaine") 
+	"Mojave CT Icons") "Moka")
+	 "Nitrux")  "Oranchelo") "Paper" 
+	"Papirus")
+	sudo sh -c "echo 'deb http://ppa.launchpad.net/papirus/papirus/ubuntu focal main' > /etc/apt/sources.list.d/papirus-ppa.list"
+	sudo apt-get install dirmngr
+	sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com E58A9D36647CAE7F
+	sudo apt-get update
+	sudo apt-get install papirus-icon-theme
+	wget -qO- https://git.io/papirus-icon-theme-install | sh
+	wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
+	wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
+#Filezilla
+echo -e "\e[0;35m Would you like to install the papirus filezilla theme? e\[0m"
+select yn in "Yes" "No"; do
+case $yn in
+Yes)
+	os=$(lsb_release -r | cut -f2)
+		sudo add-apt-repository ppa:papirus/papirus -yy
+		sudo apt-get update -yy
+		sudo apt-get install filezilla-theme-papirus -yy
+		xdotool type wget
+		xdotool key space
+		xdotool type https://launchpad.net/~papirus/+archive/ubuntu/papirus/+files/filezilla-theme-papirus_20201230-49+pkg3~ubuntu
+		xdotool type $os
+		xdotool type .1_all.deb
+		xdotool key enter &&
+		filename=$(ls | grep 'filezilla')
+                sudo dpkg -i $filename
+break;;
+No) break;;
+esac
+done
+#smplayer
+SMPFL=$(flatpak list | grep smplayer | cut -f1)
+if [SMPFL='SMPlayer']||{SMAPT='SMPlayer'] || SMSNAP='SMPlayer']; then
+echo -e "\e[0;35m Would you like to install the papirus smplayer theme? e\[0m"
+select yn in "Yes" "No"; do
+case $yn in
+Yes)
+	os=$(lsb_release -r | cut -f2)
+		wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-smplayer-theme/master/install.sh | sh
+		git clone https://github.com/PapirusDevelopmentTeam/papirus-smplayer-theme.git
+		cd papirus-smplayer-theme
+		make build
+		sudo make install
+break;;
+No) break;;
+esac
+done
+#libre office 
+
+	select yn in "Yes" "No"; do
+	case $yn in
+	Yes)
+# the 'then' statements need to have the inclusion of the .deb install process.	
+		PS3='Select your install method for LibreOffice Papirus Theme:'
+		PapTBMeth=("apt" ".deb" "Skip" "Quit Installer")
+		select fav in "{PapTBMeth[@]"
+		bash install.sh
+		case $fav in
+		"apt")
+			sudo add-apt-repository ppa:papirus/papirus
+			sudo apt-get update
+			sudo apt-get install libreoffice-style-papirus -yy
+			break;;
+
+		".deb")
+		os=$(lsb_release -r | cut -f2)
+		echo $os
+		if [ "$os" == '21.10' ]; then
+		wget https://launchpad.net/~papirus/+archive/ubuntu/papirus/+files/papirus-icon-theme_20211101-5562+pkg22~ubuntu21.10.1_all.deb
+		filename=$(ls | grep '.deb')
+		sudo dpkg -i $filename
+		elif [ "$os" == '21.04' ]; then
+		wget https://launchpad.net/~papirus/+archive/ubuntu/papirus/+files/papirus-icon-theme_20211101-5562+pkg22~ubuntu21.04.1_all.deb
+		filename=$(ls | grep '.deb')
+		sudo dpkg -i $filename
+		elif [ "$os" == '20.04' ]; then
+		wget https://launchpad.net/~papirus/+archive/ubuntu/papirus/+files/papirus-icon-theme_20211101-5562+pkg22~ubuntu20.04.1_all.deb
+		filename=$(ls | grep '.deb')
+		sudo dpkg -i $filename
+		else
+		echo "Sorry your operating system does not seem to be supported by the software
+			and/or the installer"
+		fi
+	select yn in "Yes" "No"; do
+	case $yn in
+	Yes)
+		git clone https://github.com/PapirusDevelopmentTeam/thunderbird-theme-papirus
+	cd ./thunderbird-theme-papirus
+	cd ./scripts
+	
+		PS3='Select your install method for Thunderbird Papirus Theme:'
+		PapTBMeth=("Standard" "flatpak" "Skip" "Quit Installer"
+		select fav in "{PapTBMeth[@]"
+		bash install.sh
+		case $fav in
+		"Standard") bash install.sh
+		"Flatpak") sudo apt-get install flatpak -yy
+				bash install.sh -f ~/.var/app/org.mozilla.Thunderbird/.thunderbird
+		break;;
+		esac
+		done
+
+	 "Shadow")
+  "Numix Circle" "Vivacious-Colors" "White Sur"  "Xenlism"  "Zafiro")
+
+
+
+break:
+No)

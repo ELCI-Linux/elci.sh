@@ -9,7 +9,7 @@ select fav in "${emacs[@]}"; do
         guix package -i emacs -yy && break;;
 "apt-get")
         sudo apt-get install emacs -yy && break;;
-"Chrome")
+"pacman")
         sudo pacman -S emacs && break;;
 "dnf")
        sudo dnf install emacs ** break:;

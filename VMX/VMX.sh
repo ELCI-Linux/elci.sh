@@ -16,6 +16,9 @@ select fav in "${Download[@]}"; do
     case $fav in
 "Bottles")
             bash BottlesX.sh && break;;
+"Phoenicis")
+	flatpak install --user flathub org.phoenicisplayonlinux -yy
+	break;;
 "Virtualbox")
                 bash VMOracleX.sh && break;;
 "All")

@@ -25,7 +25,7 @@ select fav in "${Browser[@]}"; do
 	sudo apt-get update -yy && sudo apt-get upgrade -yy
 	sudo apt-get install firefox -yy && break;;
 "Konqueror")
-	sudo apt install konqueror -yy && break;;
+	sudo apt install konqueror && break;;
 "Links")
 	sudo mkdir ./LinksInstallFiles || echo "Installer directory already exists"
 	cd ./LinksInstallFiles &&
@@ -38,23 +38,23 @@ sudo ./configure ; make ./Makefile &&
 	cd .. ; cd .. && rm -r ./LinksInstallFiles || echo "Sorry, it seems like there was an issue installing links" break;;
 
 "Midori")
-echo -e "\e[0;34m How would you like to install? \e[0m"
-PS3='Pick your install method for midori'
-Midori=("Flatpak" "Snap"  "Skip" "Quit Installer")
-select fav in "${Midori[@]}"; do
-    case $fav in
-"Flatpak") flatpak install flathub org.midori_browser.Midori && break;;
-"Snap")	sudo dnf install snapd &&
+	echo -e "\e[0;34m How would you like to install? \e[0m"
+	PS3='Pick your install method for midori'
+	Midori=("Flatpak" "Snap"  "Skip" "Quit Installer")
+	select fav in "${Midori[@]}"; do
+    	case $fav in
+	"Flatpak") flatpak install flathub org.midori_browser.Midori && break;;
+	"Snap")	sudo dnf install snapd &&
 	sudo ln -s /var/lib/snapd/snap /snap
 	sudo snap install midori  -yy && break;;
-"Skip")
+	"Skip")
         break;;
-"Quit Installer")
+	"Quit Installer")
             echo "User requested exit"
             exit;;
         *) echo "invalid option $REPLY";;
-    esac
-done;;
+	esac
+	done;;
 "Min")
 	wget -o Min.deb https://github.com/minbrowser/min/releases/download/v1.21.0/min_1.21.0_amd64.deb
 	sudo dpkg -i min_1.21.0_amd64.deb && break;;
