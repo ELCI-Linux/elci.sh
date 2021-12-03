@@ -14,6 +14,13 @@ select yn in "Yes" "No"; do
     esac
 done
 
+#bfgminer
+echo "Would you like to install bfgminer?" 
+select yn in "Yes" "No" ; do
+case $yn in
+Yes ) sudo apt-get update && sudo apt-get upgrade & & sudo apt-get install bfgminer
+No ) echo "ok moving on..." 
+
 echo -e  "\e[7;35m BitCoin Core \e[0m"
 echo -e  "\e[7;36m Bitcoin Core is open source software which enables the use of BitCoin (BTC) \e[0m"
 
